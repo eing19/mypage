@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023년 버킷리스트</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+        * {
+            font-family: 'Jua', sans-serif;
+        }
+
+        .title {
+            color: mintcream;
+            background-color: tomato;
+            font-size: 24px;
+            padding: 4px 14px;
+            border: 8px;
+        }
+
+        .bg {
+            width: 360px;
+            background-image:
+                url("https://i.pinimg.com/564x/72/4c/17/724c1717163b80205a3ff65086675ecb.jpg");
+        }
+
+        .msg {
+            font-weight: bold;
+        }
+
+        .bucket {
+            width: 160px;
+            height: 160px;
+        }
+
+        .img1 {
+            background-image:
+                url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img2 {
+            background-image:
+                url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        button {
+            border: none;
+            background: none;
+        }
+
+        button.bucket {
+            transition: all 0.3s ease;
+        }
+
+        button.bucket:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <link rel="stylesheet" type="text/css"
+        href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
+</head>
+
+<body class="bg center">
+    <h1 class="title-t3">2023년 하고싶은 것들</h1>
+    <p class="msg">이룰 수 있는 것들만 쓰기 !</p>
+    <div class="row flex-row wrap">
+        <button class="bucket img1-t5 center">몸무게 65kg 만들기</button>
+        <button class="bucket img2-t5 center">부모님 용돈 드리기</button>
+        <button class="bucket img2-t5 center">대학가기</button>
+        <button class="bucket img1-t5 center">여자 전화번호 받기</button>
+        <button class="bucket img1-t5 center">여자한테 먼저 연락하기</button>
+        <button class="bucket img2-t5 center">여자친구 만들기</button>
+        <button class="bucket img2-t5 center">여자친구랑 데이트하기</button>
+        <button class="bucket img1-t5 center">여자친구 집까지 데려다주기</button>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('.bucket'); // 버튼 요소들을 모두 선택합니다.
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('done'); // 해당 버튼의 클래스에서 'done' 클래스를 추가하거나 제거합니다.
+            });
+        });
+    </script>
+</body>
+
+</html>
